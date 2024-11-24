@@ -19,7 +19,7 @@ namespace UniSpace.Data.Models
         [Required]
         [ForeignKey(nameof(User))]
         public string UserId { get; set; }
-        public User User { get; set; }
+        public UserInfo User { get; set; }
 
         [Required]
         public DateTime StartTime { get; set; }

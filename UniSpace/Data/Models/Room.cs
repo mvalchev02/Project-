@@ -18,7 +18,6 @@ namespace UniSpace.Data.Models
         [Required]
         [StringLength(50)]
         public string Equipment { get; set; }
-        [ForeignKey(nameof(Reservations))]
         public virtual ICollection<Reservation> Reservations { get; set; }
     }
 }

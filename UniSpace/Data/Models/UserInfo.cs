@@ -6,8 +6,7 @@ namespace UniSpace.Data.Models
 {
     public class UserInfo : IdentityUser
     {
-        [Key]
-        public int Id { get; set; }
+        
         [Required]
         [StringLength(30)]
         public string FirstName { get; set; }
@@ -23,7 +22,6 @@ namespace UniSpace.Data.Models
         [Required]
         [StringLength(20)]
         public string Role { get; set; }
-        [ForeignKey(nameof(Reservations))]
         public virtual ICollection<Reservation> Reservations { get; set; }
     }
 
