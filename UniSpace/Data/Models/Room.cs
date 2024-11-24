@@ -9,7 +9,7 @@ namespace UniSpace.Data.Models
         public int Id { get; set; }
         [Required]
         [StringLength(30)]
-        public string Name { get; set; }
+        public string Type { get; set; }
         [Required]
         public int Capacity { get; set; }
         [Required]

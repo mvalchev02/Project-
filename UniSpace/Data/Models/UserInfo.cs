@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace UniSpace.Data.Models
 {
-    public class User : IdentityUser
+    public class UserInfo : IdentityUser
     {
         [Key]
         public int Id { get; set; }

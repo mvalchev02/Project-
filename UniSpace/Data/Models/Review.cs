@@ -12,7 +12,7 @@ public class Review
     public Room Room { get; set; }
     [Required]
     public string UserId { get; set; }
-    public User User { get; set; }
+    public UserInfo User { get; set; }
     [Required]
 
     public int Rating { get; set; } 
