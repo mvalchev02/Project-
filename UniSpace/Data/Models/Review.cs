@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Identity;
+using System;
 using System.ComponentModel.DataAnnotations;
 using UniSpace.Data.Models;
 
@@ -12,7 +13,7 @@ public class Review
     public Room Room { get; set; }
     [Required]
     public string UserId { get; set; }
-    public UserInfo User { get; set; }
+    public IdentityUser User { get; set; }
     [Required]
 
     public int Rating { get; set; } 

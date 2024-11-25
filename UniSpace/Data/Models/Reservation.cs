@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Identity;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -17,9 +18,9 @@ namespace UniSpace.Data.Models
         public Room Room { get; set; }
 
         [Required]
-        [ForeignKey(nameof(User))]
+        [ForeignKey(nameof(IdentityUser))]
         public string UserId { get; set; }
-        public UserInfo User { get; set; }
+        public IdentityUser User { get; set; }
 
         [Required]
         public DateTime StartTime { get; set; }

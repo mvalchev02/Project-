@@ -14,7 +14,6 @@ namespace UniSpace.Data
         public DbSet<Reservation> Reservations { get; set; }
         public DbSet<Specialty> Specialties { get; set; }
         public DbSet<Subject> Subjects { get; set; }
-        public DbSet<UserInfo> UsersInfo { get; set; }
         public DbSet<Review> Reviews { get; set; }
         public DbSet<Student> Students { get; set; }
         public DbSet<Proffesseur> Professeurs { get; set; }
@@ -43,6 +42,19 @@ namespace UniSpace.Data
                    .WithMany()
                    .HasForeignKey(r => r.SubjectId);
             });
+            modelBuilder.Entity<Subject>(entity =>
+            {
+                entity.HasOne(s => s.Specialty)
+                      .WithMany()
+                      .HasForeignKey(s => s.SpecialtyId);
+            });
+            modelBuilder.Entity<Proffesseur>(entity =>
+            {
+                entity.HasMany(p => p.TaughtSubjects)
+                      .WithMany()
+                      .UsingEntity(join => join.ToTable("ProfessorSubjects"));
+            });
+
 
 
         }

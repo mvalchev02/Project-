@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using UniSpace.Data.Models.Enums;
 
 namespace UniSpace.Data.Models
 {
@@ -14,6 +15,8 @@ namespace UniSpace.Data.Models
         public int SpecialtyId { get; set; }
         public Specialty Specialty { get; set; }
 
-        public int Course { get; set; }
+
+        [Required]
+        public CoursesEnum Course { get; set; }
     }
 }
