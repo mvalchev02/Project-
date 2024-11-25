@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using UniSpace.Data;
 
@@ -11,9 +12,11 @@ using UniSpace.Data;
 namespace UniSpace.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241125183703_AddingRelations")]
+    partial class AddingRelations
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -329,6 +332,9 @@ namespace UniSpace.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<string>("UserInfoId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.HasKey("Id");
 
                     b.HasIndex("RoomId");
@@ -340,6 +346,8 @@ namespace UniSpace.Migrations
                     b.HasIndex("SubjectId");
 
                     b.HasIndex("UserId");
+
+                    b.HasIndex("UserInfoId");
 
                     b.ToTable("Reservations");
                 });
@@ -383,10 +391,6 @@ namespace UniSpace.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Courses")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -421,7 +425,7 @@ namespace UniSpace.Migrations
                     b.ToTable("Subjects");
                 });
 
-            modelBuilder.Entity("UniSpace.Data.Models.Proffesseur", b =>
+            modelBuilder.Entity("UniSpace.Data.Models.UserInfo", b =>
                 {
                     b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
 
@@ -439,47 +443,33 @@ namespace UniSpace.Migrations
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Role")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.HasDiscriminator().HasValue("UserInfo");
+                });
+
+            modelBuilder.Entity("UniSpace.Data.Models.Proffesseur", b =>
+                {
+                    b.HasBaseType("UniSpace.Data.Models.UserInfo");
 
                     b.HasDiscriminator().HasValue("Proffesseur");
                 });
 
             modelBuilder.Entity("UniSpace.Data.Models.Student", b =>
                 {
-                    b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
+                    b.HasBaseType("UniSpace.Data.Models.UserInfo");
 
                     b.Property<int>("Course")
                         .HasColumnType("int");
 
-                    b.Property<string>("FirstName")
-                        .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
+                    b.Property<int>("SpecialtyId")
+                        .HasColumnType("int");
 
-                    b.Property<string>("LastName")
-                        .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
-
-                    b.Property<string>("Phone")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<string>("Specialty")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.ToTable("AspNetUsers", t =>
-                        {
-                            t.Property("FirstName")
-                                .HasColumnName("Student_FirstName");
-
-                            t.Property("LastName")
-                                .HasColumnName("Student_LastName");
-
-                            t.Property("Phone")
-                                .HasColumnName("Student_Phone");
-                        });
+                    b.HasIndex("SpecialtyId");
 
                     b.HasDiscriminator().HasValue("Student");
                 });
@@ -558,7 +548,7 @@ namespace UniSpace.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "User")
+                    b.HasOne("UniSpace.Data.Models.UserInfo", "User")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -589,11 +579,15 @@ namespace UniSpace.Migrations
                         .WithMany()
                         .HasForeignKey("SubjectId");
 
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "User")
+                    b.HasOne("UniSpace.Data.Models.UserInfo", "User")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.HasOne("UniSpace.Data.Models.UserInfo", null)
+                        .WithMany("Reservations")
+                        .HasForeignKey("UserInfoId");
 
                     b.Navigation("Room");
 
@@ -615,7 +609,23 @@ namespace UniSpace.Migrations
                     b.Navigation("Specialty");
                 });
 
+            modelBuilder.Entity("UniSpace.Data.Models.Student", b =>
+                {
+                    b.HasOne("UniSpace.Data.Models.Specialty", "Specialty")
+                        .WithMany()
+                        .HasForeignKey("SpecialtyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Specialty");
+                });
+
             modelBuilder.Entity("UniSpace.Data.Models.Room", b =>
+                {
+                    b.Navigation("Reservations");
+                });
+
+            modelBuilder.Entity("UniSpace.Data.Models.UserInfo", b =>
                 {
                     b.Navigation("Reservations");
                 });
