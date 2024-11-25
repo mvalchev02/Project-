@@ -3,20 +3,64 @@
   "WorkspaceRootPath": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Migrations\\20241124203738_OtherTables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:UniSpace\\Migrations\\20241124203738_OtherTables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|d:\\12e\\iv \u043A\u0443\u0440\u0441\\diplomeproject\\.github\\unispace\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|solutionrelative:unispace\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|d:\\12e\\iv \u043A\u0443\u0440\u0441\\diplomeproject\\.github\\unispace\\migrations\\20241124200444_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|solutionrelative:unispace\\migrations\\20241124200444_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\unispace\\data\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|solutionrelative:unispace\\data\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\unispace\\data\\models\\proffesseur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|solutionrelative:unispace\\data\\models\\proffesseur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\unispace\\data\\models\\enums\\reservationstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|solutionrelative:unispace\\data\\models\\enums\\reservationstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|d:\\12e\\iv \u043A\u0443\u0440\u0441\\diplomeproject\\.github\\unispace\\views\\admin\\userlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|solutionrelative:unispace\\views\\admin\\userlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|d:\\12e\\iv \u043A\u0443\u0440\u0441\\diplomeproject\\.github\\unispace\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|solutionrelative:unispace\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|d:\\12e\\iv \u043A\u0443\u0440\u0441\\diplomeproject\\.github\\unispace\\models\\userviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|solutionrelative:unispace\\models\\userviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|d:\\12e\\iv \u043A\u0443\u0440\u0441\\diplomeproject\\.github\\unispace\\controllers\\reservationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|solutionrelative:unispace\\controllers\\reservationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|d:\\12e\\iv \u043A\u0443\u0440\u0441\\diplomeproject\\.github\\unispace\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|solutionrelative:unispace\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|d:\\12e\\iv \u043A\u0443\u0440\u0441\\diplomeproject\\.github\\unispace\\views\\admin\\createuser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|solutionrelative:unispace\\views\\admin\\createuser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\unispace\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|solutionrelative:unispace\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Migrations\\20241125193623_ChangeOfStructure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:UniSpace\\Migrations\\20241125193623_ChangeOfStructure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\unispace\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|solutionrelative:unispace\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|d:\\12e\\iv \u043A\u0443\u0440\u0441\\diplomeproject\\.github\\unispace\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|solutionrelative:unispace\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\unispace\\data\\models\\specialty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|solutionrelative:unispace\\data\\models\\specialty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\unispace\\data\\models\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|solutionrelative:unispace\\data\\models\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\unispace\\data\\models\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,40 +71,40 @@
       "RelativeMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|solutionrelative:unispace\\data\\models\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\unispace\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|solutionrelative:unispace\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\unispace\\data\\models\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|solutionrelative:unispace\\data\\models\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\unispace\\data\\models\\userinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|solutionrelative:unispace\\data\\models\\userinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Migrations\\20241125185930_AddingEnums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:UniSpace\\Migrations\\20241125185930_AddingEnums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\unispace\\data\\models\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|solutionrelative:unispace\\data\\models\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\unispace\\data\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|solutionrelative:unispace\\data\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Migrations\\20241125191854_ModelChanges.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:UniSpace\\Migrations\\20241125191854_ModelChanges.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\unispace\\data\\models\\specialty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|solutionrelative:unispace\\data\\models\\specialty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|d:\\12e\\iv \u043A\u0443\u0440\u0441\\diplomeproject\\.github\\unispace\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|solutionrelative:unispace\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\unispace\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|solutionrelative:unispace\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\unispace\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|solutionrelative:unispace\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\unispace\\data\\models\\enums\\reservationstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|solutionrelative:unispace\\data\\models\\enums\\reservationstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\unispace\\data\\models\\enums\\coursesenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|solutionrelative:unispace\\data\\models\\enums\\coursesenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Migrations\\20241125183703_AddingRelations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:UniSpace\\Migrations\\20241125183703_AddingRelations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\unispace\\migrations\\20241124200444_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|solutionrelative:unispace\\migrations\\20241124200444_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\unispace\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{82B420BE-96B4-4531-A8DA-94F3472DF00D}|UniSpace\\UniSpace.csproj|solutionrelative:unispace\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,7 +114,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -82,77 +126,55 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "20241124203738_OtherTables.cs",
-              "DocumentMoniker": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Migrations\\20241124203738_OtherTables.cs",
-              "RelativeDocumentMoniker": "UniSpace\\Migrations\\20241124203738_OtherTables.cs",
-              "ToolTip": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Migrations\\20241124203738_OtherTables.cs",
-              "RelativeToolTip": "UniSpace\\Migrations\\20241124203738_OtherTables.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T20:37:38.377Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "20241124200444_InitialMigration.cs",
-              "DocumentMoniker": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Migrations\\20241124200444_InitialMigration.cs",
-              "RelativeDocumentMoniker": "UniSpace\\Migrations\\20241124200444_InitialMigration.cs",
-              "ToolTip": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Migrations\\20241124200444_InitialMigration.cs",
-              "RelativeToolTip": "UniSpace\\Migrations\\20241124200444_InitialMigration.cs",
-              "ViewState": "AQIAAEMAAAAAAAAAAAAQwCYBAAA8AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T20:04:44.463Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Review.cs",
-              "DocumentMoniker": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Data\\Models\\Review.cs",
-              "RelativeDocumentMoniker": "UniSpace\\Data\\Models\\Review.cs",
-              "ToolTip": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Data\\Models\\Review.cs",
-              "RelativeToolTip": "UniSpace\\Data\\Models\\Review.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:49:24.053Z"
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "UniSpace\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "UniSpace\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAAwBoAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-25T19:44:00.435Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Reservation.cs",
-              "DocumentMoniker": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Data\\Models\\Reservation.cs",
-              "RelativeDocumentMoniker": "UniSpace\\Data\\Models\\Reservation.cs",
-              "ToolTip": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Data\\Models\\Reservation.cs",
-              "RelativeToolTip": "UniSpace\\Data\\Models\\Reservation.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAIAywB8AAAAbAAAA",
+              "Title": "UserViewModel.cs",
+              "DocumentMoniker": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Models\\UserViewModel.cs",
+              "RelativeDocumentMoniker": "UniSpace\\Models\\UserViewModel.cs",
+              "ToolTip": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Models\\UserViewModel.cs",
+              "RelativeToolTip": "UniSpace\\Models\\UserViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:44:51.746Z"
+              "WhenOpened": "2024-11-25T19:06:41.952Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "UniSpace\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "UniSpace\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAUwBMAAAA7AAAA",
+              "Title": "ReservationController.cs",
+              "DocumentMoniker": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Controllers\\ReservationController.cs",
+              "RelativeDocumentMoniker": "UniSpace\\Controllers\\ReservationController.cs",
+              "ToolTip": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Controllers\\ReservationController.cs",
+              "RelativeToolTip": "UniSpace\\Controllers\\ReservationController.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAAAkwBUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T18:23:29.867Z"
+              "WhenOpened": "2024-11-25T18:50:43.59Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "UserInfo.cs",
-              "DocumentMoniker": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Data\\Models\\UserInfo.cs",
-              "RelativeDocumentMoniker": "UniSpace\\Data\\Models\\UserInfo.cs",
-              "ToolTip": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Data\\Models\\UserInfo.cs",
-              "RelativeToolTip": "UniSpace\\Data\\Models\\UserInfo.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:36:03.918Z"
+              "DocumentIndex": 7,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "UniSpace\\Views\\_ViewStart.cshtml",
+              "ToolTip": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "UniSpace\\Views\\_ViewStart.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-25T19:48:57.054Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -162,25 +184,222 @@
               "RelativeDocumentMoniker": "UniSpace\\Data\\Models\\Proffesseur.cs",
               "ToolTip": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Data\\Models\\Proffesseur.cs",
               "RelativeToolTip": "UniSpace\\Data\\Models\\Proffesseur.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAxAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T19:10:38.062Z"
+              "WhenOpened": "2024-11-24T19:10:38.062Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 13,
+              "Title": "Specialty.cs",
+              "DocumentMoniker": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Data\\Models\\Specialty.cs",
+              "RelativeDocumentMoniker": "UniSpace\\Data\\Models\\Specialty.cs",
+              "ToolTip": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Data\\Models\\Specialty.cs",
+              "RelativeToolTip": "UniSpace\\Data\\Models\\Specialty.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T19:38:10.288Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Student.cs",
+              "DocumentMoniker": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Data\\Models\\Student.cs",
+              "RelativeDocumentMoniker": "UniSpace\\Data\\Models\\Student.cs",
+              "ToolTip": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Data\\Models\\Student.cs",
+              "RelativeToolTip": "UniSpace\\Data\\Models\\Student.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T19:37:16.505Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "UniSpace\\Controllers\\AdminController.cs",
+              "ToolTip": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "UniSpace\\Controllers\\AdminController.cs",
+              "ViewState": "AQIAAEYAAAAAAAAAAADwv14AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T19:04:23.184Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Program.cs",
+              "RelativeDocumentMoniker": "UniSpace\\Program.cs",
+              "ToolTip": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Program.cs",
+              "RelativeToolTip": "UniSpace\\Program.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAQwBgAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T19:49:16.351Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserList.cshtml",
+              "DocumentMoniker": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Views\\Admin\\UserList.cshtml",
+              "RelativeDocumentMoniker": "UniSpace\\Views\\Admin\\UserList.cshtml",
+              "ToolTip": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Views\\Admin\\UserList.cshtml",
+              "RelativeToolTip": "UniSpace\\Views\\Admin\\UserList.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAABIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-25T19:53:30.231Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ApplicationDbContextModelSnapshot.cs",
+              "DocumentMoniker": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "UniSpace\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ToolTip": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeToolTip": "UniSpace\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T18:27:51.757Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CreateUser.cshtml",
+              "DocumentMoniker": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Views\\Admin\\CreateUser.cshtml",
+              "RelativeDocumentMoniker": "UniSpace\\Views\\Admin\\CreateUser.cshtml",
+              "ToolTip": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Views\\Admin\\CreateUser.cshtml",
+              "RelativeToolTip": "UniSpace\\Views\\Admin\\CreateUser.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-25T19:09:06.635Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "Room.cs",
               "DocumentMoniker": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Data\\Models\\Room.cs",
               "RelativeDocumentMoniker": "UniSpace\\Data\\Models\\Room.cs",
               "ToolTip": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Data\\Models\\Room.cs",
               "RelativeToolTip": "UniSpace\\Data\\Models\\Room.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAFAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T17:37:02.033Z"
+              "WhenOpened": "2024-11-18T17:37:02.033Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 15,
+              "Title": "Review.cs",
+              "DocumentMoniker": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Data\\Models\\Review.cs",
+              "RelativeDocumentMoniker": "UniSpace\\Data\\Models\\Review.cs",
+              "ToolTip": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Data\\Models\\Review.cs",
+              "RelativeToolTip": "UniSpace\\Data\\Models\\Review.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T17:49:24.053Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "UniSpace\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "UniSpace\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAcwA0AAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T18:23:29.867Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "20241125193623_ChangeOfStructure.cs",
+              "DocumentMoniker": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Migrations\\20241125193623_ChangeOfStructure.cs",
+              "RelativeDocumentMoniker": "UniSpace\\Migrations\\20241125193623_ChangeOfStructure.cs",
+              "ToolTip": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Migrations\\20241125193623_ChangeOfStructure.cs",
+              "RelativeToolTip": "UniSpace\\Migrations\\20241125193623_ChangeOfStructure.cs",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAYwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T19:36:24.215Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Reservation.cs",
+              "DocumentMoniker": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Data\\Models\\Reservation.cs",
+              "RelativeDocumentMoniker": "UniSpace\\Data\\Models\\Reservation.cs",
+              "ToolTip": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Data\\Models\\Reservation.cs",
+              "RelativeToolTip": "UniSpace\\Data\\Models\\Reservation.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABYAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T17:44:51.746Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "20241125185930_AddingEnums.cs",
+              "DocumentMoniker": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Migrations\\20241125185930_AddingEnums.cs",
+              "RelativeDocumentMoniker": "UniSpace\\Migrations\\20241125185930_AddingEnums.cs",
+              "ToolTip": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Migrations\\20241125185930_AddingEnums.cs",
+              "RelativeToolTip": "UniSpace\\Migrations\\20241125185930_AddingEnums.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T18:59:30.795Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Subject.cs",
+              "DocumentMoniker": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Data\\Models\\Subject.cs",
+              "RelativeDocumentMoniker": "UniSpace\\Data\\Models\\Subject.cs",
+              "ToolTip": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Data\\Models\\Subject.cs",
+              "RelativeToolTip": "UniSpace\\Data\\Models\\Subject.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T19:38:43.612Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "UniSpace\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "UniSpace\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T19:04:14.105Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "20241125191854_ModelChanges.cs",
+              "DocumentMoniker": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Migrations\\20241125191854_ModelChanges.cs",
+              "RelativeDocumentMoniker": "UniSpace\\Migrations\\20241125191854_ModelChanges.cs",
+              "ToolTip": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Migrations\\20241125191854_ModelChanges.cs",
+              "RelativeToolTip": "UniSpace\\Migrations\\20241125191854_ModelChanges.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T19:18:55.489Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
               "Title": "ReservationStatus.cs",
               "DocumentMoniker": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Data\\Models\\Enums\\ReservationStatus.cs",
               "RelativeDocumentMoniker": "UniSpace\\Data\\Models\\Enums\\ReservationStatus.cs",
@@ -188,59 +407,51 @@
               "RelativeToolTip": "UniSpace\\Data\\Models\\Enums\\ReservationStatus.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T19:47:22.706Z"
+              "WhenOpened": "2024-11-24T19:47:22.706Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Subject.cs",
-              "DocumentMoniker": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Data\\Models\\Subject.cs",
-              "RelativeDocumentMoniker": "UniSpace\\Data\\Models\\Subject.cs",
-              "ToolTip": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Data\\Models\\Subject.cs",
-              "RelativeToolTip": "UniSpace\\Data\\Models\\Subject.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "DocumentIndex": 22,
+              "Title": "CoursesEnum.cs",
+              "DocumentMoniker": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Data\\Models\\Enums\\CoursesEnum.cs",
+              "RelativeDocumentMoniker": "UniSpace\\Data\\Models\\Enums\\CoursesEnum.cs",
+              "ToolTip": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Data\\Models\\Enums\\CoursesEnum.cs",
+              "RelativeToolTip": "UniSpace\\Data\\Models\\Enums\\CoursesEnum.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T19:38:43.612Z"
+              "WhenOpened": "2024-11-24T19:48:10.775Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Program.cs",
-              "RelativeDocumentMoniker": "UniSpace\\Program.cs",
-              "ToolTip": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Program.cs",
-              "RelativeToolTip": "UniSpace\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAABwAAAA",
+              "DocumentIndex": 23,
+              "Title": "20241125183703_AddingRelations.cs",
+              "DocumentMoniker": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Migrations\\20241125183703_AddingRelations.cs",
+              "RelativeDocumentMoniker": "UniSpace\\Migrations\\20241125183703_AddingRelations.cs",
+              "ToolTip": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Migrations\\20241125183703_AddingRelations.cs",
+              "RelativeToolTip": "UniSpace\\Migrations\\20241125183703_AddingRelations.cs",
+              "ViewState": "AQIAADwAAAAAAAAAAAAYwEgAAAA+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T19:49:16.351Z"
+              "WhenOpened": "2024-11-25T18:37:03.6Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Specialty.cs",
-              "DocumentMoniker": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Data\\Models\\Specialty.cs",
-              "RelativeDocumentMoniker": "UniSpace\\Data\\Models\\Specialty.cs",
-              "ToolTip": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Data\\Models\\Specialty.cs",
-              "RelativeToolTip": "UniSpace\\Data\\Models\\Specialty.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAoAAAA",
+              "DocumentIndex": 24,
+              "Title": "20241124200444_InitialMigration.cs",
+              "DocumentMoniker": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Migrations\\20241124200444_InitialMigration.cs",
+              "RelativeDocumentMoniker": "UniSpace\\Migrations\\20241124200444_InitialMigration.cs",
+              "ToolTip": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Migrations\\20241124200444_InitialMigration.cs",
+              "RelativeToolTip": "UniSpace\\Migrations\\20241124200444_InitialMigration.cs",
+              "ViewState": "AQIAAD0AAAAAAAAAAAAQwCYBAAA8AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T19:38:10.288Z"
+              "WhenOpened": "2024-11-24T20:04:44.463Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Student.cs",
-              "DocumentMoniker": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Data\\Models\\Student.cs",
-              "RelativeDocumentMoniker": "UniSpace\\Data\\Models\\Student.cs",
-              "ToolTip": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Data\\Models\\Student.cs",
-              "RelativeToolTip": "UniSpace\\Data\\Models\\Student.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T19:37:16.505Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 25,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\appsettings.json",
               "RelativeDocumentMoniker": "UniSpace\\appsettings.json",
@@ -248,19 +459,8 @@
               "RelativeToolTip": "UniSpace\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-24T19:59:46.232Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "CoursesEnum.cs",
-              "DocumentMoniker": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Data\\Models\\Enums\\CoursesEnum.cs",
-              "RelativeDocumentMoniker": "UniSpace\\Data\\Models\\Enums\\CoursesEnum.cs",
-              "ToolTip": "D:\\12e\\IV \u043A\u0443\u0440\u0441\\DiplomeProject\\.github\\UniSpace\\Data\\Models\\Enums\\CoursesEnum.cs",
-              "RelativeToolTip": "UniSpace\\Data\\Models\\Enums\\CoursesEnum.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T19:48:10.775Z"
+              "WhenOpened": "2024-11-24T19:59:46.232Z",
+              "EditorCaption": ""
             }
           ]
         }
