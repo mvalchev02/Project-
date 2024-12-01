@@ -1,7 +1,4 @@
-﻿using Microsoft.AspNetCore.Identity;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using UniSpace.Data.Models.Enums;
 
@@ -9,7 +6,6 @@ namespace UniSpace.Data.Models
 {
     public class Reservation
     {
-        [Key]
         public int Id { get; set; }
 
         [Required]
@@ -18,35 +14,15 @@ namespace UniSpace.Data.Models
         public Room Room { get; set; }
 
         [Required]
-        [ForeignKey(nameof(IdentityUser))]
-        public string UserId { get; set; }
-        public IdentityUser User { get; set; }
+        [ForeignKey(nameof(Professor))]
+        public string ProfessorId { get; set; }
+        public Proffesseur Professor { get; set; }
 
         [Required]
-        public DateTime StartTime { get; set; }
+        public DateTime Date { get; set; }
 
         [Required]
-        public DateTime EndTime { get; set; }
-
-        [Required]
-        [MaxLength(50)]
-        public ReservationStatus Status { get; set; } 
-
-        [Required]
-        [MaxLength(100)]
-        public string ReasonForReservation { get; set; } 
-
-        [ForeignKey(nameof(Specialty))]
-        public int? SpecialtyId { get; set; } 
-        public Specialty Specialty { get; set; }
-
-        public CoursesEnum Course { get; set; } 
-
-        [ForeignKey(nameof(Subject))]
-        public int? SubjectId { get; set; } 
-        public Subject Subject { get; set; }
-
-        [MaxLength(500)]
-        public string Notes { get; set; }
+        public ReservationStatus Status { get; set; } = ReservationStatus.Pending;
+        public string Note { get; set; }
     }
 }

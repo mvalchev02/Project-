@@ -2,8 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using UniSpace.Data.Models;
-using UniSpace.Data.Models.Enums;
-using UniSpace.Models;
+using UniSpace.ViewModels;
 
 namespace UniSpace.Controllers
 {
@@ -19,80 +18,56 @@ namespace UniSpace.Controllers
             _roleManager = roleManager;
         }
 
-        [HttpGet]
+        // Display all users
+        public IActionResult Index()
+        {
+            var users = _userManager.Users.ToList();
+            return View(users);
+        }
+
+        // Create a new user (GET)
         public IActionResult CreateUser()
         {
             return View();
         }
 
+        // Create a new user (POST)
         [HttpPost]
-        public async Task<IActionResult> CreateUser(string userType, string email, string password, string firstName, string lastName, string phone, string specialty, CoursesEnum? course)
+        public async Task<IActionResult> CreateUser(CreateUserViewModel model)
         {
-            if (string.IsNullOrEmpty(userType) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
+            if (ModelState.IsValid)
             {
-                ModelState.AddModelError("", "Всички задължителни полета трябва да са попълнени.");
-                return View();
-            }
-
-            IdentityUser newUser;
-            if (userType == "Professor")
-            {
-                newUser = new Proffesseur
+                var user = new IdentityUser
                 {
-                    UserName = email,
-                    Email = email,
-                    FirstName = firstName,
-                    LastName = lastName,
-                    Phone = phone
+                    UserName = model.Email,
+                    Email = model.Email
                 };
 
-                await _userManager.CreateAsync(newUser, password);
-                await _userManager.AddToRoleAsync(newUser, "Professor");
-            }
-            else if (userType == "Student")
-            {
-                newUser = new Student
+                var result = await _userManager.CreateAsync(user, model.Password);
+                if (result.Succeeded)
                 {
-                    UserName = email,
-                    Email = email,
-                    FirstName = firstName,
-                    LastName = lastName,
-                    Phone = phone,
-                    Specialty = specialty,
-                    Course = course.Value
-                };
+                    if (!string.IsNullOrEmpty(model.Role))
+                    {
+                        // Ensure the role exists
+                        if (!await _roleManager.RoleExistsAsync(model.Role))
+                        {
+                            await _roleManager.CreateAsync(new IdentityRole(model.Role));
+                        }
 
-                await _userManager.CreateAsync(newUser, password);
-                await _userManager.AddToRoleAsync(newUser, "Student");
-            }
-            else
-            {
-                ModelState.AddModelError("", "Невалиден тип потребител.");
-                return View();
-            }
+                        // Assign role to user
+                        await _userManager.AddToRoleAsync(user, model.Role);
+                    }
 
-            return RedirectToAction("UserList");
-        }
+                    return RedirectToAction(nameof(Index));
+                }
 
-        public async Task<IActionResult> UserList()
-        {
-            var users = _userManager.Users.ToList();
-
-            var userViewModels = new List<AddUserViewModel>();
-
-            foreach (var user in users)
-            {
-                var role = (await _userManager.GetRolesAsync(user)).FirstOrDefault();
-                userViewModels.Add(new AddUserViewModel
+                foreach (var error in result.Errors)
                 {
-                    Email = user.Email,
-                    Role = role
-                });
+                    ModelState.AddModelError("", error.Description);
+                }
             }
 
-            return View(userViewModels);
+            return View(model);
         }
-
-
     }
 }

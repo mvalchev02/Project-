@@ -1,62 +1,50 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using UniSpace.Data.Models;
 
 namespace UniSpace.Data
 {
-    public class ApplicationDbContext : IdentityDbContext
+    public class ApplicationDbContext : IdentityDbContext<IdentityUser>
     {
-        public ApplicationDbContext(DbContextOptions options) : base(options)
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+            : base(options)
         {
         }
-
+        public DbSet<Admin> Admins { get; set; }
+        public DbSet<Proffesseur> Professors { get; set; }
+        public DbSet<Subject> Subjects { get; set; }
+        public DbSet<Specialty> Specialties { get; set; }
         public DbSet<Room> Rooms { get; set; }
         public DbSet<Reservation> Reservations { get; set; }
-        public DbSet<Specialty> Specialties { get; set; }
-        public DbSet<Subject> Subjects { get; set; }
-        public DbSet<Review> Reviews { get; set; }
-        public DbSet<Student> Students { get; set; }
-        public DbSet<Proffesseur> Professeurs { get; set; }
-
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
+            modelBuilder.Entity<Proffesseur>()
+                .HasMany(p => p.TaughtSubjects)
+                .WithOne(s => s.Professor)
+                .HasForeignKey(s => s.ProfessorId)
+                .OnDelete(DeleteBehavior.Restrict);
 
-            modelBuilder.Entity<Reservation>(entity =>
-            {
-                entity.HasOne(r => r.Room)
-                       .WithMany()
-                       .HasForeignKey(r => r.RoomId);
+            modelBuilder.Entity<Subject>()
+                .HasOne(s => s.Specialty)
+                .WithMany(sp => sp.Subjects)
+                .HasForeignKey(s => s.SpecialtyId)
+                .OnDelete(DeleteBehavior.Restrict);
 
-                entity.HasOne(r => r.User)
-                       .WithMany()
-                       .HasForeignKey(r => r.UserId);
+            modelBuilder.Entity<Reservation>()
+                .HasOne(r => r.Room)
+                .WithMany(r => r.Reservations)
+                .HasForeignKey(r => r.RoomId)
+                .OnDelete(DeleteBehavior.Restrict);
 
-                entity.HasOne(r => r.Specialty)
-                   .WithMany()
-                   .HasForeignKey(r => r.SpecialtyId);
-
-                entity.HasOne(r => r.Subject)
-                   .WithMany()
-                   .HasForeignKey(r => r.SubjectId);
-            });
-            modelBuilder.Entity<Subject>(entity =>
-            {
-                entity.HasOne(s => s.Specialty)
-                      .WithMany()
-                      .HasForeignKey(s => s.SpecialtyId);
-            });
-            modelBuilder.Entity<Proffesseur>(entity =>
-            {
-                entity.HasMany(p => p.TaughtSubjects)
-                      .WithMany()
-                      .UsingEntity(join => join.ToTable("ProfessorSubjects"));
-            });
-
-
-
+            modelBuilder.Entity<Reservation>()
+                .HasOne(r => r.Professor)
+                .WithMany()
+                .HasForeignKey(r => r.ProfessorId)
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

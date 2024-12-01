@@ -1,0 +1,33 @@
+﻿@model UniSpace.Data.Models.Subject
+
+<h1>Edit Subject</h1>
+
+<form asp-action="Edit">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="SpecialtyId">Specialty</label>
+        <select asp-for="SpecialtyId" asp-items="ViewBag.SpecialtyId" class="form-control"></select>
+        <span asp-validation-for="SpecialtyId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Course"></label>
+        <select asp-for="Course" class="form-control">
+            @foreach (var course in Enum.GetValues(typeof(UniSpace.Data.Models.Enums.CoursesEnum)).Cast<UniSpace.Data.Models.Enums.CoursesEnum>())
+            {
+                <option value="@((int)course)" selected="@(Model.Course == course)">
+                    @course
+                </option>
+            }
+        </select>
+        <span asp-validation-for="Course" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+
+<a asp-action="Index" class="btn btn-secondary">Back to List</a>

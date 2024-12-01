@@ -1,24 +1,20 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+using UniSpace.Data.Models.Enums;
 
 namespace UniSpace.Data.Models
 {
     public class Room
     {
-        [Key]
         public int Id { get; set; }
-        [Required]
-        [StringLength(30)]
-        public string Type { get; set; }
-        [Required]
-        public int Capacity { get; set; }
-        [Required]
-        [StringLength(30)]
-        public string Location { get; set; }
+
         [Required]
         [StringLength(50)]
+        public string Name { get; set; }
+
+        [Required]
+        public RoomType Type { get; set; }
+        public int Capacity { get; set; }
         public string Equipment { get; set; }
-        public virtual ICollection<Reservation> Reservations { get; set; }
+        public ICollection<Reservation> Reservations { get; set; } = new List<Reservation>();
     }
 }
-
