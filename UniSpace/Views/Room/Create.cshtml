@@ -1,0 +1,29 @@
+﻿@using UniSpace.Data.Models.Enums
+@model UniSpace.Data.Models.Room
+
+<h2>Create New Room</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="Name">Room Name</label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Type">Room Type</label>
+        <select asp-for="Type" class="form-control">
+            @foreach (var type in Enum.GetValues(typeof(RoomType)).Cast<RoomType>())
+            {
+                <option value="@type">@type</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label asp-for="Capacity">Capacity</label>
+        <input asp-for="Capacity" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Equipment">Equipment</label>
+        <input asp-for="Equipment" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-success">Create</button>
+</form>
