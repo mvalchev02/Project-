@@ -1,16 +1,12 @@
-﻿@model IEnumerable<UniSpace.Data.Models.Room>
+﻿@model IEnumerable<WebApplication1.Data.Models.Room>
 
-<h2>Rooms</h2>
-
-<a asp-action="Create" class="btn btn-primary mb-3">Add New Room</a>
 
 <table class="table">
     <thead>
         <tr>
             <th>Name</th>
-            <th>Type</th>
             <th>Capacity</th>
-            <th>Equipment</th>
+            <th>Type</th>
             <th>Actions</th>
         </tr>
     </thead>
@@ -19,18 +15,14 @@
         {
             <tr>
                 <td>@room.Name</td>
-                <td>@room.Type</td>
                 <td>@room.Capacity</td>
-                <td>@room.Equipment</td>
+                <td>@room.Type</td>
                 <td>
-                    <a asp-action="Details" asp-route-id="@room.Id" class="btn btn-info">Details</a>
-                    <a asp-action="Edit" asp-route-id="@room.Id" class="btn btn-warning">Edit</a>
-
-                    <form asp-action="Delete" asp-route-id="@room.Id" method="post" style="display:inline;">
-                        <button type="submit" class="btn btn-danger">Delete</button>
-                    </form>
+                    <a asp-action="Edit" asp-route-id="@room.Id" class="btn btn-primary">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@room.Id" class="btn btn-danger">Delete</a>
                 </td>
             </tr>
         }
     </tbody>
 </table>
+<a asp-action="Create" class="btn btn-success">Add New Room</a>

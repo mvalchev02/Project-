@@ -1,21 +1,36 @@
-﻿@model IEnumerable<Microsoft.AspNetCore.Identity.IdentityUser>
+﻿@model List<UserWithRolesViewModel>
 
-<h1>Manage Users</h1>
-<a asp-action="CreateUser" class="btn btn-primary">Create New User</a>
+@{
+    ViewData["Title"] = "Потребители";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<a href="@Url.Action("AddProfessor", "Admin")" class="btn btn-success mb-3">Добави Професор</a>
 
 <table class="table">
     <thead>
         <tr>
+            <th>Име</th>
             <th>Email</th>
-            <th>Actions</th>
+            <th>Роля</th>
+            <th>Действия</th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var user in Model)
+        @foreach (var userWithRoles in Model)
         {
             <tr>
-                <td>@user.Email</td>
+                <td>@userWithRoles.User.UserName</td>
+                <td>@userWithRoles.User.Email</td>
                 <td>
+                    @foreach (var role in userWithRoles.Roles)
+                    {
+                        <span>@role</span>
+                    }
+                </td>
+                <td>
+                    <a href="@Url.Action("AddToRole", "Admin", new { userId = userWithRoles.User.Id, roleName = "Professor" })" class="btn btn-primary">Добави към професори</a>
                 </td>
             </tr>
         }

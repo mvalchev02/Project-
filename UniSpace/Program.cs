@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using UniSpace.Data;
-using UniSpace.Data.Models;
+using WebApplication1.Data;
 
 namespace UniSpace
 {
@@ -10,17 +9,19 @@ namespace UniSpace
         public static async Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            // Получаване на низ за връзка към базата данни
             var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
                                    ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
 
             builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connectionString));
 
+            // Добавяне на Razor Pages и Controllers
             builder.Services.AddRazorPages();
             builder.Services.AddControllersWithViews();
 
-
-            // Set up Identity with roles and password policy
-            builder.Services.AddIdentity<IdentityUser,IdentityRole>(options =>
+            // Настройка на Identity с роля Admin и Professor
+            builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
             {
                 options.Password.RequireDigit = false;
                 options.Password.RequireNonAlphanumeric = false;
@@ -30,18 +31,17 @@ namespace UniSpace
             })
             .AddEntityFrameworkStores<ApplicationDbContext>()
             .AddDefaultTokenProviders();
-            ;
 
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline
+            // Конфигуриране на HTTP request pipeline
             if (!app.Environment.IsDevelopment())
             {
                 app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
 
-            // Call the seeding method to create roles and admin user
+            // Създаване на роли и потребители при стартиране на приложението
             using (var scope = app.Services.CreateScope())
             {
                 var services = scope.ServiceProvider;
@@ -51,11 +51,9 @@ namespace UniSpace
                 await CreateRoles(roleManager, userManager);
             }
 
-
             // Middleware pipeline setup
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
             app.UseRouting();
             app.MapRazorPages();
             app.UseAuthentication();
@@ -68,13 +66,12 @@ namespace UniSpace
             app.Run();
         }
 
-        // Seed roles and admin user
+        // Seed roles и създаване на потребители
         private static async Task CreateRoles(RoleManager<IdentityRole> roleManager, UserManager<IdentityUser> userManager)
         {
-            // Define roles
             string[] roleNames = { "Admin", "Professor" };
 
-            // Check and create roles
+            // Проверка и създаване на роли
             foreach (var roleName in roleNames)
             {
                 if (!await roleManager.RoleExistsAsync(roleName))
@@ -83,7 +80,7 @@ namespace UniSpace
                 }
             }
 
-            // Create default admin user
+            // Създаване на default администратор
             string adminEmail = "admin@myuni.com";
             string adminPassword = "Admin123321";
 
@@ -101,6 +98,26 @@ namespace UniSpace
                 if (result.Succeeded)
                 {
                     await userManager.AddToRoleAsync(adminUser, "Admin");
+                }
+            }
+
+            // Създаване на професор
+            string professorEmail = "karpunchev@myuni.com";
+            string professorPassword = "Professor@123";
+
+            var professorUser = await userManager.FindByEmailAsync(professorEmail);
+            if (professorUser == null)
+            {
+                professorUser = new IdentityUser
+                {
+                    UserName = professorEmail,
+                    Email = professorEmail
+                };
+
+                var result = await userManager.CreateAsync(professorUser, professorPassword);
+                if (result.Succeeded)
+                {
+                    await userManager.AddToRoleAsync(professorUser, "Professor");
                 }
             }
         }

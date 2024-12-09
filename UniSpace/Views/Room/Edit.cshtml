@@ -1,35 +1,23 @@
-﻿@using UniSpace.Data.Models.Enums
-@model UniSpace.Data.Models.Room
+﻿@model WebApplication1.Data.Models.Room
 
-<h2>@ViewData["Title"]</h2>
-
-<form asp-action="Edit" method="post">
+<h2>Edit Room</h2>
+<form asp-action="Edit">
     <input type="hidden" asp-for="Id" />
-
     <div class="form-group">
-        <label asp-for="Name"></label>
+        <label for="Name">Name</label>
         <input asp-for="Name" class="form-control" />
         <span asp-validation-for="Name" class="text-danger"></span>
     </div>
-
     <div class="form-group">
-        <label asp-for="Type"></label>
-        <select asp-for="Type" class="form-control" asp-items="@(new SelectList(ViewBag.RoomTypes, Model.Type))">
-        </select>
-        <span asp-validation-for="Type" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="Capacity"></label>
+        <label for="Capacity">Capacity</label>
         <input asp-for="Capacity" class="form-control" />
         <span asp-validation-for="Capacity" class="text-danger"></span>
     </div>
-
     <div class="form-group">
-        <label asp-for="Equipment"></label>
-        <textarea asp-for="Equipment" class="form-control"></textarea>
+        <label for="Type">Type</label>
+        <select asp-for="Type" asp-items="ViewBag.RoomTypes" class="form-control"></select>
+        <span asp-validation-for="Type" class="text-danger"></span>
     </div>
-
     <button type="submit" class="btn btn-primary">Save</button>
     <a asp-action="Index" class="btn btn-secondary">Cancel</a>
 </form>

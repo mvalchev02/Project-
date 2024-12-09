@@ -1,105 +1,81 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using UniSpace.Data.Models.Enums;
-using UniSpace.Data.Models;
-using UniSpace.Data;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using WebApplication1.Data.Models.Enums;
+using WebApplication1.Data.Models;
+using WebApplication1.Data;
 
-[Authorize(Roles = "Admin")]
-public class RoomController : Controller
+namespace WebApplication1.Controllers
 {
-    private readonly ApplicationDbContext _context;
-
-    public RoomController(ApplicationDbContext context)
+    public class RoomController : Controller
     {
-        _context = context;
-    }
+        private readonly ApplicationDbContext _context;
 
-    public IActionResult Index()
-    {
-        var rooms = _context.Rooms.ToList();
-        return View(rooms);
-    }
-
-    public IActionResult Details(int id)
-    {
-        var room = _context.Rooms.FirstOrDefault(r => r.Id == id);
-        if (room == null)
+        public RoomController(ApplicationDbContext context)
         {
-            return NotFound();
+            _context = context;
         }
-        return View("Details", room);
-    }
 
-    [HttpGet]
-    public IActionResult Create()
-    {
-        ViewBag.RoomTypes = Enum.GetValues(typeof(RoomType)).Cast<RoomType>();
-        return View();
-    }
-
-    [HttpPost]
-    public IActionResult Create(Room room)
-    {
-        if (ModelState.IsValid)
+        public IActionResult Index()
         {
-            _context.Rooms.Add(room);
-            _context.SaveChanges();
-            return RedirectToAction("Index");
+            var rooms = _context.Rooms.ToList();
+            return View(rooms);
         }
-        ViewBag.RoomTypes = Enum.GetValues(typeof(RoomType)).Cast<RoomType>();
-        return View("Room/Create", room);
-    }
 
-    [HttpGet]
-    public IActionResult Edit(int id)
-    {
-        var room = _context.Rooms.FirstOrDefault(r => r.Id == id);
-        if (room == null)
+        public IActionResult Create()
         {
-            return NotFound();
+            ViewBag.RoomTypes = Enum.GetValues(typeof(RoomType))
+                .Cast<RoomType>()
+                .Select(rt => new SelectListItem { Value = rt.ToString(), Text = rt.ToString() })
+                .ToList();
+            return View();
         }
-        ViewBag.RoomTypes = Enum.GetValues(typeof(RoomType)).Cast<RoomType>();
-        return View("Edit",room);
-    }
 
-    [HttpPost]
-    public IActionResult Edit(Room room)
-    {
-        if (ModelState.IsValid)
+        [HttpPost]
+        public IActionResult Create(Room room)
         {
-            var existingRoom = _context.Rooms.FirstOrDefault(r => r.Id == room.Id);
-            if (existingRoom != null)
+            if (ModelState.IsValid)
             {
-                existingRoom.Name = room.Name;
-                existingRoom.Type = room.Type;
-                existingRoom.Capacity = room.Capacity;
-                existingRoom.Equipment = room.Equipment;
-
+                _context.Rooms.Add(room);
                 _context.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction(nameof(Index));
             }
-            else
-            {
-                return NotFound();
-            }
+            return View(room);
         }
 
-        ViewBag.RoomTypes = Enum.GetValues(typeof(RoomType)).Cast<RoomType>();
-        return View(room);
-    }
-
-
-
-    [HttpPost]
-    public IActionResult Delete(int id)
-    {
-        var room = _context.Rooms.FirstOrDefault(r => r.Id == id);
-        if (room == null)
+        public IActionResult Edit(int id)
         {
-            return NotFound();
+            var room = _context.Rooms.Find(id);
+            if (room == null) return NotFound();
+
+            ViewBag.RoomTypes = Enum.GetValues(typeof(RoomType))
+                .Cast<RoomType>()
+                .Select(rt => new SelectListItem { Value = rt.ToString(), Text = rt.ToString() })
+                .ToList();
+
+            return View(room);
         }
-        _context.Rooms.Remove(room);
-        _context.SaveChanges();
-        return RedirectToAction("Index");
+
+        [HttpPost]
+        public IActionResult Edit(Room room)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Rooms.Update(room);
+                _context.SaveChanges();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(room);
+        }
+
+        public IActionResult Delete(int id)
+        {
+            var room = _context.Rooms.Find(id);
+            if (room == null) return NotFound();
+
+            _context.Rooms.Remove(room);
+            _context.SaveChanges();
+            return RedirectToAction(nameof(Index));
+        }
     }
+
 }

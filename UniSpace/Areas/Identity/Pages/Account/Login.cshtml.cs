@@ -14,9 +14,8 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
-using Microsoft.AspNetCore.Authentication.Cookies;
 
-namespace UniSpace.Areas.Identity.Pages.Account
+namespace WebApplication1.Areas.Identity.Pages.Account
 {
     public class LoginModel : PageModel
     {
@@ -136,12 +135,6 @@ namespace UniSpace.Areas.Identity.Pages.Account
 
             // If we got this far, something failed, redisplay form
             return Page();
-        }
-        public async Task<IActionResult> OnPostLogoutAsync()
-        {
-            await _signInManager.SignOutAsync();
-            _logger.LogInformation("User logged out.");
-            return RedirectToPage("/Index");    
         }
     }
 }

@@ -1,8 +1,8 @@
-﻿namespace UniSpace.Data.Models.Enums
+﻿namespace WebApplication1.Data.Models.Enums
 {
     public enum RoomType
     {
-        Computer,
-        Seminar
+        ComputerLab,
+        SeminarRoom
     }
 }

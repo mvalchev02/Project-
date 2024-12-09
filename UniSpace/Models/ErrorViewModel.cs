@@ -1,4 +1,4 @@
-namespace UniSpace.Models
+namespace WebApplication1.Models
 {
     public class ErrorViewModel
     {

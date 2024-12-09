@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
-using UniSpace.Models;
+using WebApplication1.Models;
 
-namespace UniSpace.Controllers
+namespace WebApplication1.Controllers
 {
     public class HomeController : Controller
     {

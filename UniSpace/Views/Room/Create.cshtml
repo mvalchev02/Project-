@@ -1,29 +1,20 @@
-﻿@using UniSpace.Data.Models.Enums
-@model UniSpace.Data.Models.Room
+﻿@model WebApplication1.Data.Models.Room
 
-<h2>Create New Room</h2>
-
-<form asp-action="Create" method="post">
+<form asp-action="Create">
     <div class="form-group">
-        <label asp-for="Name">Room Name</label>
+        <label for="Name">Name</label>
         <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="Type">Room Type</label>
-        <select asp-for="Type" class="form-control">
-            @foreach (var type in Enum.GetValues(typeof(RoomType)).Cast<RoomType>())
-            {
-                <option value="@type">@type</option>
-            }
-        </select>
-    </div>
-    <div class="form-group">
-        <label asp-for="Capacity">Capacity</label>
+        <label for="Capacity">Capacity</label>
         <input asp-for="Capacity" class="form-control" />
+        <span asp-validation-for="Capacity" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="Equipment">Equipment</label>
-        <input asp-for="Equipment" class="form-control" />
+        <label for="Type">Type</label>
+        <select asp-for="Type" asp-items="ViewBag.RoomTypes" class="form-control"></select>
+        <span asp-validation-for="Type" class="text-danger"></span>
     </div>
-    <button type="submit" class="btn btn-success">Create</button>
+    <button type="submit" class="btn btn-primary">Save</button>
 </form>

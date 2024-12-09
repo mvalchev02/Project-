@@ -1,13 +1,10 @@
-﻿@model IEnumerable<UniSpace.Data.Models.Specialty>
-@using UniSpace.Data.Models
+﻿@model IEnumerable<WebApplication1.Data.Models.Specialty>
 
 <h2>Specialties</h2>
-
 <table class="table">
     <thead>
         <tr>
             <th>Name</th>
-            <th>Main Subjects</th>
             <th>Actions</th>
         </tr>
     </thead>
@@ -17,28 +14,11 @@
             <tr>
                 <td>@specialty.Name</td>
                 <td>
-                    @if (specialty.MainSubjects.Any())
-                    {
-                        @foreach (var subject in specialty.MainSubjects)
-                        {
-                            <span>@subject.Name</span>
-                            <br />
-                        }
-                    }
-                    else
-                    {
-                        <span>No main subjects selected</span>
-                    }
-                </td>
-                <td>
-                    <a href="@Url.Action("Edit", new { id = specialty.Id })" class="btn btn-primary">Edit</a>
-                    <a href="@Url.Action("Details", new { id = specialty.Id })" class="btn btn-info">Details</a>
-                    <form asp-action="Delete" method="post" style="display:inline;">
-                        <input type="hidden" name="id" value="@specialty.Id" />
-                        <button type="submit" class="btn btn-danger">Delete</button>
-                    </form>
+                    <a asp-action="Edit" asp-route-id="@specialty.Id" class="btn btn-primary">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@specialty.Id" class="btn btn-danger">Delete</a>
                 </td>
             </tr>
         }
     </tbody>
 </table>
+<a asp-action="Create" class="btn btn-success">Add New Specialty</a>

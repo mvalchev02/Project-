@@ -1,27 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using UniSpace.Data.Models.Enums;
-
-namespace UniSpace.Data.Models
+﻿namespace WebApplication1.Data.Models
 {
     public class Subject
     {
         public int Id { get; set; }
-
-        [Required]
         public string Name { get; set; }
-
-        [Required]
-        [ForeignKey(nameof(Specialty))]
-        public int SpecialtyId { get; set; }
-        public Specialty Specialty { get; set; }
-
-        [Required]
-        [ForeignKey(nameof(Professor))]
-        public string ProfessorId { get; set; }
-        public Proffesseur Professor { get; set; }
-
-        [Required]
-        public CoursesEnum Course { get; set; }
     }
 }

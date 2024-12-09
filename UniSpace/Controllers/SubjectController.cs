@@ -1,83 +1,70 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using UniSpace.Data;
-using UniSpace.Data.Models;
+using WebApplication1.Data.Models;
+using WebApplication1.Data;
 
-public class SubjectController : Controller
+namespace WebApplication1.Controllers
 {
-    private readonly ApplicationDbContext _context;
-
-    public SubjectController(ApplicationDbContext context)
+    public class SubjectController : Controller
     {
-        _context = context;
-    }
+        private readonly ApplicationDbContext _context;
 
-    public IActionResult Index()
-    {
-        var subjects = _context.Subjects.ToList();
-        return View(subjects);
-    }
-
-    public IActionResult Details(int id)
-    {
-        var subject = _context.Subjects.FirstOrDefault(s => s.Id == id);
-        if (subject == null)
+        public SubjectController(ApplicationDbContext context)
         {
-            return NotFound();
+            _context = context;
         }
-        return View("Details",subject);
-    }
 
-    [HttpGet]
-    public IActionResult Create()
-    {
-        return View();
-    }
-
-    [HttpPost]
-    public IActionResult Create(Subject subject)
-    {
-        if (ModelState.IsValid)
+        public IActionResult Index()
         {
-            _context.Subjects.Add(subject);
+            var subjects = _context.Subjects.ToList();
+            return View(subjects);
+        }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(Subject subject)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Subjects.Add(subject);
+                _context.SaveChanges();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(subject);
+        }
+
+        public IActionResult Edit(int id)
+        {
+            var subject = _context.Subjects.Find(id);
+            if (subject == null) return NotFound();
+
+            return View(subject);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(Subject subject)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Subjects.Update(subject);
+                _context.SaveChanges();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(subject);
+        }
+
+        public IActionResult Delete(int id)
+        {
+            var subject = _context.Subjects.Find(id);
+            if (subject == null) return NotFound();
+
+            _context.Subjects.Remove(subject);
             _context.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction(nameof(Index));
         }
-        return View("Create", subject);
     }
 
-    [HttpGet]
-    public IActionResult Edit(int id)
-    {
-        var subject = _context.Subjects.FirstOrDefault(s => s.Id == id);
-        if (subject == null)
-        {
-            return NotFound();
-        }
-        return View(subject);
-    }
-
-    [HttpPost]
-    public IActionResult Edit(Subject subject)
-    {
-        if (ModelState.IsValid)
-        {
-            _context.Subjects.Update(subject);
-            _context.SaveChanges();
-            return RedirectToAction("Index");
-        }
-        return View("Edit", subject);
-    }
-
-    [HttpPost]
-    public IActionResult Delete(int id)
-    {
-        var subject = _context.Subjects.FirstOrDefault(s => s.Id == id);
-        if (subject == null)
-        {
-            return NotFound();
-        }
-        _context.Subjects.Remove(subject);
-        _context.SaveChanges();
-        return RedirectToAction("Index");
-    }
 }
