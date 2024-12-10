@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WebApplication1.Data.Models;
 using WebApplication1.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace WebApplication1.Controllers
 {
@@ -13,10 +14,29 @@ namespace WebApplication1.Controllers
             _context = context;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index(string searchString, int? pageNumber, string currentFilter)
         {
-            var subjects = _context.Subjects.ToList();
-            return View(subjects);
+            ViewData["CurrentFilter"] = searchString;
+
+            var subjects = from s in _context.Subjects select s;
+
+            if (searchString != null)
+            {
+                pageNumber = 1;
+            }
+            else
+            {
+                searchString = currentFilter;
+            }
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                subjects = subjects.Where(s => s.Name.Contains(searchString));
+            }
+
+            int pageSize = 5;
+            return View(await PaginatedList<Subject>.CreateAsync(subjects.AsNoTracking(), pageNumber ?? 1, pageSize));
+
         }
 
         public IActionResult Create()

@@ -15,7 +15,6 @@ namespace UniSpace.Controllers
             _roleManager = roleManager;
         }
 
-        // Метод за показване на потребителите
         public async Task<IActionResult> Index()
         {
             var users = _userManager.Users.ToList();
@@ -34,7 +33,6 @@ namespace UniSpace.Controllers
             return View(usersWithRoles);
         }
 
-        // Метод за добавяне на потребител в роля
         public async Task<IActionResult> AddToRole(string userId, string roleName)
         {
             var user = await _userManager.FindByIdAsync(userId);
@@ -46,7 +44,6 @@ namespace UniSpace.Controllers
             return RedirectToAction("Index");
         }
 
-        // Метод за добавяне на нов професор
         [HttpPost]
         public async Task<IActionResult> AddProfessor(string email, string password)
         {
@@ -65,7 +62,6 @@ namespace UniSpace.Controllers
             var result = await _userManager.CreateAsync(professor, password);
             if (result.Succeeded)
             {
-                // Добавяне на професора към роля
                 await _userManager.AddToRoleAsync(professor, "Professor");
                 TempData["SuccessMessage"] = "Професорът беше добавен успешно!";
                 return RedirectToAction("Index");
@@ -79,7 +75,6 @@ namespace UniSpace.Controllers
             return View();
         }
 
-        // Метод за показване на форма за добавяне на професор
         public IActionResult AddProfessor()
         {
             return View();
