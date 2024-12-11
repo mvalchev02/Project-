@@ -14,11 +14,18 @@
             <tr>
                 <td>@course.Name</td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@course.Id" class="btn btn-primary">Edit</a>
-                    <a asp-action="Delete" asp-route-id="@course.Id" class="btn btn-danger">Delete</a>
+                    @if (User.IsInRole("Admin"))
+                    {
+
+                        <a asp-action="Edit" asp-route-id="@course.Id" class="btn btn-primary">Edit</a>
+                        <a asp-action="Delete" asp-route-id="@course.Id" class="btn btn-danger">Delete</a>
+                    }
                 </td>
             </tr>
         }
     </tbody>
 </table>
-<a asp-action="Create" class="btn btn-success">Add New Course</a>
+@if (User.IsInRole("Admin"))
+{
+    <a asp-action="Create" class="btn btn-success">Add New Course</a>
+}

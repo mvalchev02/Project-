@@ -78,6 +78,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[8.0.7, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.14.0, )"
             }
           },
           "imports": [

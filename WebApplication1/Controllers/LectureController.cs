@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 namespace WebApplication1
 {
 
-    [Authorize]
+    [Authorize(Roles ="Professor")]
     public class LecturesController : Controller
     {
         private readonly ApplicationDbContext _context;

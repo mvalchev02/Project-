@@ -26,14 +26,20 @@
             <tr>
                 <td>@subject.Name</td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@subject.Id" class="btn btn-primary">Edit</a>
-                    <a asp-action="Delete" asp-route-id="@subject.Id" class="btn btn-danger">Delete</a>
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <a asp-action="Edit" asp-route-id="@subject.Id" class="btn btn-primary">Edit</a>
+                        <a asp-action="Delete" asp-route-id="@subject.Id" class="btn btn-danger">Delete</a>
+                    }
                 </td>
             </tr>
         }
     </tbody>
 </table>
-<a asp-action="Create" class="btn btn-success">Add New Subject</a>
+@if (User.IsInRole("Admin"))
+{
+    <a asp-action="Create" class="btn btn-success">Add New Subject</a>
+}
 
 @{
     var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";

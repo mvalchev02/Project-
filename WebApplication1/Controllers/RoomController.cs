@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using WebApplication1.Data.Models.Enums;
 using WebApplication1.Data.Models;
 using WebApplication1.Data;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WebApplication1.Controllers
 {
@@ -15,11 +16,13 @@ namespace WebApplication1.Controllers
             _context = context;
         }
 
+        [Authorize(Roles = "Professor,Admin")]
         public IActionResult Index()
         {
             var rooms = _context.Rooms.ToList();
             return View(rooms);
         }
+        [Authorize(Roles = "Admin")]
 
         public IActionResult Create()
         {
@@ -29,6 +32,7 @@ namespace WebApplication1.Controllers
                 .ToList();
             return View();
         }
+        [Authorize(Roles = "Admin")]
 
         [HttpPost]
         public IActionResult Create(Room room)
@@ -41,6 +45,7 @@ namespace WebApplication1.Controllers
             }
             return View(room);
         }
+        [Authorize(Roles = "Admin")]
 
         public IActionResult Edit(int id)
         {
@@ -55,6 +60,8 @@ namespace WebApplication1.Controllers
             return View(room);
         }
 
+        [Authorize(Roles = "Admin")]
+
         [HttpPost]
         public IActionResult Edit(Room room)
         {
@@ -66,6 +73,7 @@ namespace WebApplication1.Controllers
             }
             return View(room);
         }
+        [Authorize(Roles = "Admin")]
 
         public IActionResult Delete(int id)
         {

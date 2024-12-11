@@ -10,17 +10,14 @@ namespace UniSpace
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Получаване на низ за връзка към базата данни
             var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
                                    ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
 
             builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connectionString));
 
-            // Добавяне на Razor Pages и Controllers
             builder.Services.AddRazorPages();
             builder.Services.AddControllersWithViews();
 
-            // Настройка на Identity с роля Admin и Professor
             builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
             {
                 options.Password.RequireDigit = false;
@@ -34,14 +31,12 @@ namespace UniSpace
 
             var app = builder.Build();
 
-            // Конфигуриране на HTTP request pipeline
             if (!app.Environment.IsDevelopment())
             {
                 app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
 
-            // Създаване на роли и потребители при стартиране на приложението
             using (var scope = app.Services.CreateScope())
             {
                 var services = scope.ServiceProvider;
@@ -51,11 +46,13 @@ namespace UniSpace
                 await CreateRoles(roleManager, userManager);
             }
 
-            // Middleware pipeline setup
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseRouting();
             app.MapRazorPages();
+            app.UseExceptionHandler("/Error/500");
+            app.UseStatusCodePagesWithReExecute("/Error/{0}");
+
             app.UseAuthentication();
             app.UseAuthorization();
 
@@ -66,12 +63,10 @@ namespace UniSpace
             app.Run();
         }
 
-        // Seed roles и създаване на потребители
         private static async Task CreateRoles(RoleManager<IdentityRole> roleManager, UserManager<IdentityUser> userManager)
         {
             string[] roleNames = { "Admin", "Professor" };
 
-            // Проверка и създаване на роли
             foreach (var roleName in roleNames)
             {
                 if (!await roleManager.RoleExistsAsync(roleName))
@@ -80,7 +75,6 @@ namespace UniSpace
                 }
             }
 
-            // Създаване на default администратор
             string adminEmail = "admin@myuni.com";
             string adminPassword = "Admin123321";
 
@@ -101,7 +95,6 @@ namespace UniSpace
                 }
             }
 
-            // Създаване на професор
             string professorEmail = "karpunchev@myuni.com";
             string professorPassword = "Professor@123";
 

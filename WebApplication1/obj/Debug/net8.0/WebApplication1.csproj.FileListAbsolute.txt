@@ -292,3 +292,4 @@ D:\12e\UniSpacer\WebApplication1\WebApplication1\bin\Debug\net8.0\runtimes\win-a
 D:\12e\UniSpacer\WebApplication1\WebApplication1\bin\Debug\net8.0\runtimes\win-arm64\native\e_sqlite3.dll
 D:\12e\UniSpacer\WebApplication1\WebApplication1\bin\Debug\net8.0\runtimes\win-x64\native\e_sqlite3.dll
 D:\12e\UniSpacer\WebApplication1\WebApplication1\bin\Debug\net8.0\runtimes\win-x86\native\e_sqlite3.dll
+D:\12e\UniSpacer\WebApplication1\WebApplication1\bin\Debug\net8.0\nunit.framework.dll

@@ -90,6 +90,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVjdHVyZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/12e/UniSpacer/WebApplication1/WebApplication1/Views/Lectures/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVjdHVyZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/12e/UniSpacer/WebApplication1/WebApplication1/Views/Lectures/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVjdHVyZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/12e/UniSpacer/WebApplication1/WebApplication1/Views/Lectures/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVjdHVyZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -112,6 +120,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/12e/UniSpacer/WebApplication1/WebApplication1/Views/Room/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9vbVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/12e/UniSpacer/WebApplication1/WebApplication1/Views/Shared/404.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXDQwNC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/12e/UniSpacer/WebApplication1/WebApplication1/Views/Shared/500.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXDUwMC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/12e/UniSpacer/WebApplication1/WebApplication1/Views/Shared/Error.cshtml]

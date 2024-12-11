@@ -3,6 +3,7 @@
     public enum RoomType
     {
         ComputerLab,
-        SeminarRoom
+        SeminarRoom,
+        Auditorium
     }
 }
