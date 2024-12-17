@@ -1,22 +1,23 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using WebApplication1.Controllers.Services.Interfaces;
 using WebApplication1.Data;
 using WebApplication1.Data.Models;
-
+using WebApplication1.Services;
 
 namespace WebApplication1.Controllers
 {
     public class CourseController : Controller
     {
-        private readonly ApplicationDbContext _context;
+        private readonly ICourseService _courseService;
 
-        public CourseController(ApplicationDbContext context)
+        public CourseController(ICourseService courseService)
         {
-            _context = context;
+            _courseService = courseService;
         }
 
         public IActionResult Index()
         {
-            var courses = _context.Courses.ToList();
+            var courses = _courseService.GetAllCourses();
             return View(courses);
         }
 
@@ -30,8 +31,7 @@ namespace WebApplication1.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Courses.Add(course);
-                _context.SaveChanges();
+                _courseService.AddCourse(course);
                 return RedirectToAction(nameof(Index));
             }
             return View(course);
@@ -39,7 +39,7 @@ namespace WebApplication1.Controllers
 
         public IActionResult Edit(int id)
         {
-            var course = _context.Courses.Find(id);
+            var course = _courseService.GetCourseById(id);
             if (course == null) return NotFound();
 
             return View(course);
@@ -50,8 +50,7 @@ namespace WebApplication1.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Courses.Update(course);
-                _context.SaveChanges();
+                _courseService.UpdateCourse(course);
                 return RedirectToAction(nameof(Index));
             }
             return View(course);
@@ -59,7 +58,7 @@ namespace WebApplication1.Controllers
 
         public IActionResult Delete(int id)
         {
-            var course = _context.Courses.Find(id);
+            var course = _courseService.GetCourseById(id);
             if (course == null) return NotFound();
 
             return View(course);
@@ -68,13 +67,10 @@ namespace WebApplication1.Controllers
         [HttpPost, ActionName("Delete")]
         public IActionResult DeleteConfirmed(int id)
         {
-            var course = _context.Courses.Find(id);
-            if (course == null) return NotFound();
+            var success = _courseService.DeleteCourse(id);
+            if (!success) return NotFound();
 
-            _context.Courses.Remove(course);
-            _context.SaveChanges();
             return RedirectToAction(nameof(Index));
         }
     }
-
 }

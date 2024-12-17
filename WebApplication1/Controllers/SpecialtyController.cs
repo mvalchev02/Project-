@@ -1,39 +1,40 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 using WebApplication1.Data.Models;
-using WebApplication1.Data;
-using Microsoft.AspNetCore.Authorization;
+using WebApplication1.Services.Interfaces;
 
 namespace WebApplication1.Controllers
 {
     public class SpecialtyController : Controller
     {
-        private readonly ApplicationDbContext _context;
+        private readonly ISpecialtyService _specialtyService;
 
-        public SpecialtyController(ApplicationDbContext context)
+        public SpecialtyController(ISpecialtyService specialtyService)
         {
-            _context = context;
+            _specialtyService = specialtyService;
         }
-        [Authorize(Roles = "Professor,Admin")]
 
+        [Authorize(Roles = "Professor,Admin")]
         public IActionResult Index()
         {
-            var specialties = _context.Specialties.ToList();
+            var specialties = _specialtyService.GetAllSpecialties();
             return View(specialties);
         }
-        [Authorize(Roles = "Admin")]
 
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             return View();
         }
+
         [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult Create(Specialty specialty)
         {
             if (ModelState.IsValid)
             {
-                _context.Specialties.Add(specialty);
-                _context.SaveChanges();
+                _specialtyService.AddSpecialty(specialty);
                 return RedirectToAction(nameof(Index));
             }
             return View(specialty);
@@ -42,20 +43,19 @@ namespace WebApplication1.Controllers
         [Authorize(Roles = "Admin")]
         public IActionResult Edit(int id)
         {
-            var specialty = _context.Specialties.Find(id);
+            var specialty = _specialtyService.GetSpecialtyById(id);
             if (specialty == null) return NotFound();
 
             return View(specialty);
         }
 
-        [HttpPost]
         [Authorize(Roles = "Admin")]
+        [HttpPost]
         public IActionResult Edit(Specialty specialty)
         {
             if (ModelState.IsValid)
             {
-                _context.Specialties.Update(specialty);
-                _context.SaveChanges();
+                _specialtyService.UpdateSpecialty(specialty);
                 return RedirectToAction(nameof(Index));
             }
             return View(specialty);
@@ -64,23 +64,18 @@ namespace WebApplication1.Controllers
         [Authorize(Roles = "Admin")]
         public IActionResult Delete(int id)
         {
-            var specialty = _context.Specialties.Find(id);
+            var specialty = _specialtyService.GetSpecialtyById(id);
             if (specialty == null) return NotFound();
 
             return View(specialty);
         }
 
-        [HttpPost, ActionName("Delete")]
         [Authorize(Roles = "Admin")]
+        [HttpPost, ActionName("Delete")]
         public IActionResult DeleteConfirmed(int id)
         {
-            var specialty = _context.Specialties.Find(id);
-            if (specialty == null) return NotFound();
-
-            _context.Specialties.Remove(specialty);
-            _context.SaveChanges();
+            _specialtyService.DeleteSpecialty(id);
             return RedirectToAction(nameof(Index));
         }
     }
-
 }

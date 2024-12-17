@@ -1,6 +1,10 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using WebApplication1.Controllers.Services.Interfaces;
+using WebApplication1.Controllers.Services.WebApplication1.Services;
 using WebApplication1.Data;
+using WebApplication1.Services;
+using WebApplication1.Services.Interfaces;
 
 namespace UniSpace
 {
@@ -14,6 +18,12 @@ namespace UniSpace
                                    ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
 
             builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connectionString));
+
+            builder.Services.AddScoped<ICourseService, CourseService>();
+            builder.Services.AddScoped<IRoomService, RoomService>();
+            builder.Services.AddScoped<ISpecialtyService, SpecialtyService>();
+            builder.Services.AddScoped<ISubjectService, SubjectService>();
+            builder.Services.AddScoped<ILectureService, LectureService>();
 
             builder.Services.AddRazorPages();
             builder.Services.AddControllersWithViews();
